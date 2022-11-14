@@ -229,7 +229,7 @@ additionalTypeDefs: |
     valueUSD: BigDecimal!
     pair: Pair!
   }
-  type Furo_token {
+  type FuroToken {
     id: ID!
     liquidityShares: BigInt!
     symbol: String!
@@ -321,12 +321,13 @@ additionalTypeDefs: |
   # Query Extensions
   extend type Query {
     furoTokensByChainIds(
-      chainIds: [Int!]!
-      orderBy: Token_orderBy
-      orderDirection: OrderDirection
+      skip: Int = 0
       first: Int = 100
       where: Token_filter
-    ): [Furo_token!]!
+      orderBy: Token_orderBy
+      orderDirection: OrderDirection
+      chainIds: [Int!]!
+    ): [FuroToken!]!
     bundlesByChainIds(
       chainIds: [Int!]!
     ): [Bundle!]!

@@ -187,7 +187,7 @@ export const MINICHEF_SUBGRAPH_NAME = {
 export const MASTERCHEF_V1_SUBGRAPH_NAME = 'jiro-ono/masterchef-staging' as const
 export const MASTERCHEF_V2_SUBGRAPH_NAME = 'sushiswap/master-chefv2' as const
 
-export const FURO_SUBGRAPH_NAME: Record<string, string> = {
+export const FURO_SUBGRAPH_NAME = {
   [ChainId.ETHEREUM]: 'sushi-subgraphs/furo-ethereum',
   [ChainId.GÖRLI]: 'sushi-subgraphs/furo-goerli',
   [ChainId.ARBITRUM]: 'sushi-subgraphs/furo-arbitrum',
@@ -200,7 +200,7 @@ export const FURO_SUBGRAPH_NAME: Record<string, string> = {
   [ChainId.MOONRIVER]: 'sushi-subgraphs/furo-moonriver',
   [ChainId.OPTIMISM]: 'sushi-subgraphs/furo-optimism',
   [ChainId.POLYGON]: 'sushi-subgraphs/furo-polygon',
-}
+} as const
 
 export const KASHI_SUBGRAPH_NAME: Record<number, string> = {
   [ChainId.ARBITRUM]: 'sushiswap/kashi-arbitrum',
